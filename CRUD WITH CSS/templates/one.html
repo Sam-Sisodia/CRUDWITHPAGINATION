@@ -1,0 +1,47 @@
+<html>
+    <head>
+    <title>Hello crud</title>
+    </head>
+    <style>
+        table, th, td {
+  border: 1px solid;
+  
+}
+    </style>
+    <center>
+
+    <h1> Welcome, We look forward to serving you.</h1>
+    </center>
+     <table>
+        <tr>
+          <th>Id </th>
+          <th>Title</th>
+          <th>Price</th>
+          <th>category</th>
+        
+          <th>Description </th>
+          <th>Images</td>
+            
+        </tr>
+        
+        {% comment %} {% for i in response %} {% endcomment %}
+
+        <tr>
+            <td>{{response.id}}</td>
+            <td>{{response.title}}</td>
+            <td>{{response.price}}</td>
+            <td>{{response.category}}</td>
+        
+            <td>{{response.description }} </td>
+            <td>{{response.image}}</td>
+               
+        </tr>
+{% comment %}         
+        {% endfor %} {% endcomment %}
+    
+        
+       
+      </table>
+    
+    
+</html>

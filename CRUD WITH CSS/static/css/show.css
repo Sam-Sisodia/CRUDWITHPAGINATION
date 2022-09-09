@@ -1,0 +1,45 @@
+h1{
+    color: blue;
+    
+}
+
+.edit{
+        background-color: skyblue;
+        color: white;
+        border-radius: 0.2rem;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        
+}
+
+
+.delete{
+    background-color: crimson;
+    color: white;
+    border-radius: 0.2rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    
+
+}
+
+
+.pagination{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.pagination ul{
+    
+    display: flex;
+    flex-direction: row;
+    gap :8px;
+}
+.pagination ul li{
+    background-color: crimson;
+    color: white;
+    list-style: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+}

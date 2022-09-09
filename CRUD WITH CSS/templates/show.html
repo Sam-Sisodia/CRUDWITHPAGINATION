@@ -1,0 +1,90 @@
+
+{% load static %}
+
+<html>
+    <head>
+    <title>Hello crud</title>
+    <link  rel = "stylesheet"  href = " {% static 'css/show.css' %}" >
+    </head>
+    
+   
+    </style>    
+    <center>
+        <body >
+    <h1>Welcome , We look forward to serving you.</h1> <hr/>
+</center>
+
+    <table>
+        <tr>
+         <th>Id</th>
+          <th>Title</th>
+          <th>Price</th>
+          <th> Category</th>
+          <th>Description </th> 
+          <th>Images</th>
+          <th>Edit</th>
+          <th>Delete</th>
+          
+
+        
+        
+        </tr>
+        {% for i in response %}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.title}}</td>
+                <td>{{i.price}}</td>
+                <td>{{i.category}}</td>
+                <td>{{i.description }} </td>
+                <td>{{i.image}}</td>
+                <td> <a type = "button" class = "edit" href= "{% url 'updatedata' i.id %}"> Edit </a></td>
+                    <td><a type = "button" class = "delete" href= "{% url 'delete' i.id%}"> Delete </a></td>
+                        
+            </tr>
+
+          
+
+
+        
+        {% endfor %}
+
+        
+        <hr/>   
+        
+        
+    
+
+
+        
+       
+    </table>
+    <center>
+    <div class = "pagination">
+        <ul>
+            {%  if response.has_previous  %}
+            
+           
+            <li><a href = "all?page={{response.previous_page_number}}">Previous</a></li>
+            {% endif %}
+          
+
+
+
+            <li><a href = "all?page=1">1</a></li>
+
+            <li><a href ="all?page=2">2</a></li>
+            <li><a href ="all?page=3">3</a></li>
+            <li><a href ="all?page=4">4</a></li>
+
+            {%  if response.has_next  %}
+
+
+            <li><a href ="all?page={{response.next_page_number}}">Next</a></li>
+            {% endif %}
+        </ul>
+    </div>
+    
+    </center>
+    
+    </body>
+</html>

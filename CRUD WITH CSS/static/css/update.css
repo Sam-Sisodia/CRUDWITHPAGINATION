@@ -1,0 +1,11 @@
+.submit{
+    background-color: skyblue;
+    color: white;
+    border-radius: 0.2rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+h1{
+    color: red;
+}   
